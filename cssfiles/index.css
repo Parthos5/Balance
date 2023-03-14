@@ -1,0 +1,219 @@
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*container 1 starts*/
+#grad{
+    height: 100vh;
+    /* background: linear-gradient(white,rgb(86, 195, 239))  */
+    /* background: linear-gradient(white,#00B4DB)
+ */
+}
+
+.container{
+    color:ghostwhite;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+    align-items: center;
+}
+
+.header{
+    font-weight: 500;
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    
+    /* white-space: nowrap; */
+}
+
+.subheader{
+    font-size: 17px;
+    width:50vw;
+}
+
+.cta{
+    padding: 10px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 150px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/*container 1 ends*/
+
+/*container 2 starts*/
+.container2{
+    background-color: #f8f8f8;
+    /* position: relative; */
+}
+
+.features{
+    height: 100vh;
+    overflow-y:auto;
+    /* padding-top:10vh; */
+        /* scroll-behavior: smooth; */
+    /* transform: translate3d(+10vh, +10vh, +10vh); */
+
+  /* apply the parallax effect */
+  /* make sure to adjust the speed as needed */
+  /* data-rellax-speed="-1" */
+    /* scroll-snap-type: y mandatory; */
+    perspective: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40vh;
+    overflow-x: hidden;
+}
+
+.webcomps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 69vh;
+    column-gap: 4vw;
+    scroll-snap-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+    transform-style: preserve-3d;
+    padding-bottom: 10vh;
+}
+/* 
+.webcomps:not(.center) {
+    opacity: 0.5;
+  } */
+
+.evenwebcomps{
+    flex-direction:row-reverse;
+    column-gap: 0px !important;
+}
+
+.webexs{
+    width: 48%;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+.webexs img{
+    width: 60%;
+    object-fit: contain;
+}
+
+.bottomrightimg,
+.bottomrightimg4{
+    position: absolute;
+    box-shadow:0 6px 32px 0 rgba(0,0,0,0.37);
+    right: 0;
+    top: 0;
+    /* transform: translateZ(-5px) translateX(54%)  scale(1.5) ; */
+}
+
+.topleftimg,
+.topleftimg4
+{
+    box-shadow:0 3px 32px 0 rgba(0,0,0,0.37);
+    position: absolute;
+    bottom: -15vh;
+    /* transform: translateZ(-10px) translateX(74%)  scale(2) ; */
+}
+
+.easttopleftimg{
+    transform: translateZ(-8px) translateX(74%)  scale(1.8) ;
+}
+
+.eastbottomrightimg{
+    transform: translateZ(-5px) translateX(50%) scale(1.5) ;
+}
+
+.leftdesc{
+    transform: translateZ(-10px) translateX(-18vw) scale(2) ;
+}
+
+.westtopleftimg{
+    transform: translateZ(-8px) translateX(-74%)  scale(1.8) ;
+}
+
+.westbottomrightimg{
+    transform: translateZ(-5px) translateX(-50%)  scale(1.5) ;
+}
+
+.rightdesc{
+    transform: translateZ(-10px) translateX(18vw) scale(2) ;
+}
+.desc,
+.desc4{
+    /* width: 50vw; */
+    text-align: left;
+    width: 32%;
+    padding-left: 5vw;
+    /* transform: translateZ(-5px) scale(1.5) ; */
+}
+
+#featheading{
+    /* font-family:Helvetica, sans-serif; */
+    font-size: 48px;
+    margin-bottom: 15px;
+    /* font-weight: 550; */
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 450 !important;
+}
+
+#subheading{
+    font-size: 22px;
+    text-align: left;
+    line-height: 28px;
+}
+
+.learn{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding-top: 14px;
+    cursor: pointer;
+    transition: filter 0.1s;
+
+}
+
+.learn:hover{
+    filter: brightness(200%);
+}
+
+.learn p{
+    color:orangered;
+}
+
+.rarrow{
+    color: orangered;
+    width:20px;
+}
+
+/*container 2 ends*/
+
+.container2 ::-webkit-scrollbar{
+    display: none;
+}
+
+#journal{
+    width: 60px;
+}

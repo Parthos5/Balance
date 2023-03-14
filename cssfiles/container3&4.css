@@ -1,0 +1,99 @@
+.container3{
+    font-family: 'Lato', sans-serif;
+    padding-top: 25px;
+    background-color:#fff;
+    padding: 30px 0px;
+}
+
+#aboutimg{
+    height: 70px;
+}
+
+#choose{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 55px;
+}
+
+.aboutus{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 8vh;
+}
+
+#aboutheading{
+    font-weight: 600;
+    font-size: 17px;
+    padding: 8px 0px;
+}
+
+#aboutdesc{
+    width: 520px;
+    font-size: 16px;
+}
+
+.aboutuscomponent p{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Container 4 starts */
+
+.container4{
+    position: relative;
+    padding: 70px 0px;
+}
+
+.container4 h1{
+    background-color:#f8f8f8;
+    font-family: 'Lato', sans-serif;
+}
+
+.reviewdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8vh;
+}
+
+.customer{
+    font-size: 55px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 25px;
+}
+
+#profilepic{
+    height: 150px;
+}
+
+.name{
+    text-align: center;
+    /* padding-left: 20px; */
+}
+
+.review{
+    padding-top: 20px;
+    width: 50vw;
+    /* padding-left: 18px; */
+    text-align: center;
+}
+
+.right{
+    position: absolute;
+    height: 45px;
+    right: 200px;
+    top: 250px;
+    cursor: pointer;
+}
+
+.left{
+    position: absolute;
+    height: 45px;
+    left: 200px;
+    top: 250px;
+    cursor: pointer;
+}
+/* Contianer 4 ends */

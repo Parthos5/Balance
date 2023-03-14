@@ -1,0 +1,59 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 5vw;
+    height: 40vh;
+    background-color:honeydew;
+    padding-top: 30px;
+}
+
+.logo{
+    height: 50px;
+}
+
+.brand p{
+    font-weight: 475;
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 400px;
+}
+
+.info{
+    display: flex;
+    column-gap: 10vw;
+    padding-top: 25px;
+}
+
+.featuresfooter{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+#footerheading{
+    /* font-size: 20px; */
+    font-weight: 550;
+}
+
+.list{
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.list p{
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.list p:hover{
+    color: orangered;
+}
+
+.list img{
+    cursor: pointer;
+    height: 25px;
+    object-fit: contain;
+}
+

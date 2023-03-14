@@ -1,0 +1,28 @@
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5%;
+    position: fixed;
+    width: 91%;
+    transition: background-color 0.3s ease-out;
+    z-index: 1;
+    color: white;
+    height: 75px;
+}
+
+#navtab{
+    display: flex;
+    column-gap: 35px;
+    font-size: 21px;
+}
+
+.tab{
+    cursor: pointer;
+}
+
+.solid-background{
+    background-color:#fff;
+    box-shadow:0 3px 12px 0 rgba(0,0,0,0.37);
+    color: black !important;
+}
