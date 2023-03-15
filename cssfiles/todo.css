@@ -398,6 +398,9 @@
     max-width: 69vw;
 }
 /* Actual task table starts */
+.tasktable{
+    width: 77vw;
+}
 .tableheadings{
     display: flex;
     font-size: 18px;
@@ -537,25 +540,26 @@
     cursor:pointer
 }
 
-/* .element{
+.element{
     position: relative;
-    overflow: visible;
-} */
+}
 
 #more{
     position: absolute;
     right: 4%;
+    top: 0;
     height: 40px;
-    display: none;
-    transition: display 1s;
+    /* display: none; */
+    visibility:collapse;
+    /* transition: display 1s; */
     /* z-index: 5; */
 }
 #more:hover{
-    display:block
+    visibility: visible;
 }
-.more{
+/* .more{
     display: none;
-}
+} */
 /* Actual task table ends */
 
 /* add task container starts */

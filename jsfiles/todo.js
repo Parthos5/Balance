@@ -79,37 +79,24 @@ addtaskbtn.addEventListener("click",function(){
 //select priority part
 priorityctr = 0;
 let options = document.getElementById("options");
+let p1 = document.getElementById("p1");
+let p2 = document.getElementById("p2");
+let p3 = document.getElementById("p3");
+let p4 = document.getElementById("p4");
 
 function priority(e) {
   let selectedpr = e.querySelector("p").innerHTML;
   finalpriority = selectedpr; //priority is stored here for use in other functions
-  let p1 = document.getElementById("p1");
-  let p2 = document.getElementById("p2");
-  let p3 = document.getElementById("p3");
-  let p4 = document.getElementById("p4");
-  // let p1color = p1;
-  // let p2color = p2;
-  // let p3color = p3;
-  // let p4color = p4;
+  // let p1 = document.getElementById("p1");
+  // let p2 = document.getElementById("p2");
+  // let p3 = document.getElementById("p3");
+  // let p4 = document.getElementById("p4");
 
   console.log(selectedpr);
   let cid = e.id;
   let idcid = document.getElementById(cid);
   console.log(idcid);
-  // console.log(idcid.style.backgroundColor);
-  // if (
-  //   p1.style.backgroundColor == "whitesmoke" &&
-  //   p2.style.backgroundColor == "whitesmoke" &&
-  //   p3.style.backgroundColor == "whitesmoke" &&
-  //   p4.style.backgroundColor == "whitesmoke"
-  // ) {
-  //   idcid.style.backgroundColor = "#47da99";
-  //   priorityctr = 1;
-  // } 
-  // else {
-  //   priorityctr = 0;
-  //   idcid.style.backgroundColor = "whitesmoke";
-  // }
+
   if(cid == "p1")
   {
     p1.style.backgroundColor = "#47da99"
@@ -158,9 +145,6 @@ let dateinput = document.getElementById("dateaddtask");
 let todos = document.getElementById("todos");
 
 let originalColor = document.getElementById("p1").style.backgroundColor;
-// let originalColor2 = document.getElementById("p2").style.backgroundColor;
-// let originalColor3 = document.getElementById("p3").style.backgroundColor;
-// let originalColor4 = document.getElementById("p4").style.backgroundColor;
 
 //final step of clicking add the task button
 addthetask.addEventListener("click",function(){
@@ -200,6 +184,8 @@ addthetask.addEventListener("click",function(){
       dateinput.style.backgroundColor = "whitesmoke"
     }, 500);
   }
+
+  // case of when every input field is chosen and task is added
   if(taskinput.value != "" && dateinput.value != "" && priorityctr === 1)
   {
     let formatteddate = convertdate(dateinput.value); //retreiving correct format of date
@@ -232,6 +218,12 @@ addthetask.addEventListener("click",function(){
 </div>`
     addcontainer.style.display = "none";
     addtaskbtn.style.display = "flex";
+    taskinput.value = "";
+    dateinput.value = "";
+    p1.style.backgroundColor = "whitesmoke"
+    p2.style.backgroundColor = "whitesmoke"
+    p3.style.backgroundColor = "whitesmoke"
+    p4.style.backgroundColor = "whitesmoke"
   }
 })
 
@@ -245,13 +237,13 @@ function dots(e)
   let dotsid  = e.querySelector(".more");
 
   // let mydots = document.getElementById(dotsid);
-  dotsid.style.display = "block"
+  dotsid.style.visibility = "visible"
 }
 
 function removedots(e)
 {
   let dotsid  = e.querySelector(".more");
-  dotsid.style.display = "none"
+  dotsid.style.visibility = "hidden"
 }
 
 //converting format of date to dd-mm-yyyy
@@ -266,3 +258,7 @@ const formattedDate = dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0];
 console.log(formattedDate); // prints day-month-year format of the date
 return formattedDate;
 }
+
+
+//RENDERING TASKS ON FETCHING FROM DB STARTS
+//RENDERINF TAKS ON FETHCING FROM DB ENDS
