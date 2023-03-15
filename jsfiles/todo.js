@@ -25,6 +25,7 @@ function closesidebar() {
   floats.classList.add("appear");
   rightarrow.style.display = "block";
   todolist.style.width = "92vw";
+  todolist.style.paddingLeft = "3vw"
   sidebarctr = 1;
 }
 
@@ -39,6 +40,7 @@ function opensidebar() {
   floats.classList.remove("appear");
   rightarrow.style.display = "none";
   todolist.style.width = "78vw";
+  todolist.style.paddingLeft = "0vw"
   sidebarctr = 0;
 }
 
@@ -262,3 +264,46 @@ return formattedDate;
 
 //RENDERING TASKS ON FETCHING FROM DB STARTS
 //RENDERINF TAKS ON FETHCING FROM DB ENDS
+
+//PRINTING TODAY'S DATE IN HEADING
+// Get the current date
+const currentDate = new Date();
+// Get the day of the month (1-31)
+const dayOfMonth = currentDate.getDate();
+// Get the month name (January-December)
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+const monthName = monthNames[currentDate.getMonth()];
+// Combine the day of the month and month name into the desired format
+const todaydate = `${dayOfMonth}${getOrdinalSuffix(dayOfMonth)} ${monthName}`;
+// Helper function to get the ordinal suffix (e.g. "st", "nd", "rd", or "th") for a given number
+function getOrdinalSuffix(number) {
+  if (number >= 11 && number <= 13) {
+    return "th";
+  }
+  switch (number % 10) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+}
+console.log(todaydate);
+let recentdate = document.getElementById("todaydate");
+recentdate.innerHTML = `${todaydate}`

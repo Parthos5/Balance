@@ -295,7 +295,9 @@
     background-color: #d7dee4;
     width: 78vw;
     padding-right: 8vw;
-    z-index: -1;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
     /* font-family: sans-serif; */
 }
 .date{
