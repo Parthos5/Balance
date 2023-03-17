@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a05e350007.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Timer</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="secondarycontainer">
+          <div class="painel">
+            <p id="work">Work</p>
+            <p id="break">Break</p>
+          </div>
+          <div class="timer">
+            <div class="circle">
+              <div class="time">
+                <p id="minutes"></p>
+                <p>:</p>
+                <p id="seconds"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="start" onclick="start()">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <a id="reset" href="/"
+              ><i class="fa-solid fa-arrow-rotate-left"></i
+            ></a>
+          </div>
+          <button id="bottone5" onclick="opensettings()" class="settingsbtn">Settings</button>
+        </div>
+      </div>
+      <div id="settings" class="settings">
+        <div class="optiontabs">
+          <div class="settingsoptiontabs">
+          <button onclick="showtabinfo(this)" class="optionbtn" id="generalset">General</button>
+          <button onclick="showtabinfo(this)" class="optionbtn" id="timerset">Timer</button>
+          <button onclick="showtabinfo(this)" class="optionbtn" id="notificationset">Notification</button>
+        </div>
+          <button class="default">Reset Defaults</button>
+        </div>
+        <div class="tabinfodiv">
+          <div id="generaltab" class="generaltab tabdescription">Hello</div>
+          <div id="timertab" class="timertab tabdescription"><input id="worktime" type="number" placeholder="work"><input id="breaktime" type="number" placeholder="break"></div>
+          <div id="notificationtab" class="notificationtab tabdescription">Bye</div>
+          <button id="save" class="save">Save changes</button>
+        </div>
+        <img src="crosswhite.png" onclick="closesettings()" id="closesettings" alt="">
+      </div>
+    </section>
+    <script src="./script.js"></script>
+    <script src="customizetimer.js"></script>
+  </body>
+</html>
