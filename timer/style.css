@@ -233,7 +233,27 @@ section{
     /* justify-content: center; */
     padding-top: 10vh;
     /* row-gap: 2vh; */
+    justify-content: space-between;
+    padding-bottom: 10vh;
 }
+
+.default{
+    padding: 10px;
+    background-color: transparent;
+    color: #dc3545;
+    border:1px #dc3545 solid;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s,color 0.2s;
+    font-weight: 550;
+    letter-spacing: 0.5px;
+}
+
+.default:hover{
+    background-color: #dc3545;
+    color:white
+}
+
 
 .settingsoptiontabs{
     display: flex;
@@ -267,6 +287,8 @@ section{
 
 .tabinfodiv{
     color:white;
+    width: fit-content;
+    position: relative;
 }
 
 .tabdescription{
@@ -279,9 +301,63 @@ section{
 }
 
 
+/* general tab starts */
+
 #generaltab{
     transition: display 1s ease;
+    width: 583.7px;
+    padding-left: 3vw;
+    padding-top: 10vh;
+    display: flex;
+    height: 100%;
 }
+
+.selecttheme{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#themeinput{
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 540;
+    background-color: transparent;
+    color: white;
+    padding: 10px 10px;
+}
+
+#themeinput option{
+    background-color: rgb(41,44,74);
+    color: white;
+    padding: 10px;
+}
+
+.spotifybtndiv{
+    margin-top: 50px;
+}
+
+.pomodoroexp{
+    margin-top: 40px;
+    width: 70%;
+    opacity: 0.9;
+    display: flex;
+    column-gap: 5px;
+    white-space: nowrap;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pomodoroexp:hover{
+    text-decoration: underline;
+}
+
+.rightarrow{
+    height: 20px;
+}
+
+/* general tab ends */
 
 #closesettings{
     height: 20px;
@@ -297,4 +373,170 @@ section{
     filter:brightness(100%);
 }
 
+.timertab{
+    width: 583.7px;
+    column-gap: 30px;
+    padding-left: 3vw;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+}
+
+.timerinputs{
+    width: 100px;
+    /* height: 30px; */
+    background: transparent;
+    border: 1px white solid;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-weight: 530;
+    font-size: 16px;
+    color: white;
+}
+
+.timerinputhead{
+    margin-bottom: 5px;
+    font-weight: 550;
+}
+
+#save{
+    position: absolute;
+    bottom: 75px;
+    right: 70px;
+    padding: 5px 10px;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 545;
+    font-size: 16px;
+    transition: opacity 0.1s;
+    height: 40px;
+    /* background-color: transparent; */
+    /* border: 1px solid green; */
+}
+
+#save:active{
+    opacity: 0.8;
+}
+
+#minutessubh{
+    opacity: 0.7;
+    padding-left: 5px;
+}
+
+/* switch for pomodoro setting starts */
+
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 2.8em;
+    height: 1.3em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #B0B0B0;
+    border: 1px solid #B0B0B0;
+    transition: .4s;
+    border-radius: 32px;
+    outline: none;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    outline: 2px solid #B0B0B0;
+    left: -1px;
+    bottom: -1px;
+    background-color: #fff;
+    transition: transform .25s ease-in-out 0s;
+  }
+  
+  .slider-icon {
+    opacity: 0;
+    height: 12px;
+    width: 12px;
+    stroke-width: 8;
+    position: absolute;
+    z-index: 999;
+    stroke: #222222;
+    right: 60%;
+    top: 30%;
+    transition: right ease-in-out .3s, opacity ease-in-out .15s;
+  }
+  
+  input:checked + .slider {
+    background-color: #222222;
+  }
+  
+  input:checked + .slider .slider-icon {
+    opacity: 1;
+    right: 11%;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(1.5em);
+    outline-color: #181818;
+  }
+
+  /* switch for pomodoro setting ends */
+
+  .workinputcontainer{
+    display: flex;
+    column-gap: 25px;
+  }
+
+  .classicpomodiv{
+    display: flex;
+    column-gap: 15px;
+  }
+
+  .classicpomodesc{
+    max-width: 70%;
+  }
+
+  .classictech{
+    /* font-weight: 550 !important; */
+    font-weight: 540 !important;
+    letter-spacing: 1px;
+  }
+
+  .denotepomo{
+    opacity: 0.7;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+
+  /* notification tab starts */
+  .notificationtab{
+    transition: display 1s ease;
+    width: 583.7px;
+    padding-left: 3vw;
+    padding-top: 10vh;
+    display: flex;
+  }
+
+  #notificationtoggle{
+    margin-top: 30px;
+  }
+  /* notification tab ends */
 /*settings popup ends*/

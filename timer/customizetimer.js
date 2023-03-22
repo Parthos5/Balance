@@ -32,7 +32,7 @@ function showtabinfo(e){
         notificationset.setAttribute("style", `background-color:transparent;color: white;`);
 
         //displaying and erasing other info accordingly
-        timer.style.display = "block";
+        timer.style.display = "flex";
         general.style.display = "none";
         notification.style.display= "none";
         setTimeout(function() {
@@ -41,8 +41,11 @@ function showtabinfo(e){
 
         //pushing the updated times into the localstorqage
         document.getElementById("save").addEventListener("click",function(){
+            if(worktime.value != "" && breaktime.value != "") //condn incase no input is given to timer
+            {
             let timerset = [worktime.value,breaktime.value];
             localStorage.setItem("timer",JSON.stringify(timerset));
+            }
         })
     }
     else

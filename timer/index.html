@@ -44,25 +44,132 @@
               ><i class="fa-solid fa-arrow-rotate-left"></i
             ></a>
           </div>
-          <button id="bottone5" onclick="opensettings()" class="settingsbtn">Settings</button>
+          <button id="bottone5" onclick="opensettings()" class="settingsbtn">
+            Settings
+          </button>
         </div>
       </div>
       <div id="settings" class="settings">
         <div class="optiontabs">
           <div class="settingsoptiontabs">
-          <button onclick="showtabinfo(this)" class="optionbtn" id="generalset">General</button>
-          <button onclick="showtabinfo(this)" class="optionbtn" id="timerset">Timer</button>
-          <button onclick="showtabinfo(this)" class="optionbtn" id="notificationset">Notification</button>
-        </div>
-          <button class="default">Reset Defaults</button>
+            <button
+              onclick="showtabinfo(this)"
+              class="optionbtn"
+              id="generalset"
+            >
+              General
+            </button>
+            <button onclick="showtabinfo(this)" class="optionbtn" id="timerset">
+              Timer
+            </button>
+            <button
+              onclick="showtabinfo(this)"
+              class="optionbtn"
+              id="notificationset"
+            >
+              Notification
+            </button>
+          </div>
+          <button class="default">Reset Default</button>
         </div>
         <div class="tabinfodiv">
-          <div id="generaltab" class="generaltab tabdescription">Hello</div>
-          <div id="timertab" class="timertab tabdescription"><input id="worktime" type="number" placeholder="work"><input id="breaktime" type="number" placeholder="break"></div>
-          <div id="notificationtab" class="notificationtab tabdescription">Bye</div>
+          <div id="generaltab" class="generaltab tabdescription">
+            <div class="selecttheme">
+              <h4>Select Theme:</h4>
+              <select id="themeinput" name="theme" id="">
+                <option value="classic">Classic</option>
+                <option value="rainyday">Rainy Day</option>
+                <option value="seoul">Seoul Sunrise</option>
+                <option value="coffee">Coffee Shop</option>
+                <option value="dreamy">Dreamy Clouds</option>
+              </select>
+            </div>
+            <div class="classicpomodiv spotifybtndiv">
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider">
+                 <svg class="slider-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"><path fill="none" d="m4 16.5 8 8 16-16"></path></svg> 
+                </span>
+              </label>
+              <div class="classicpomodesc spotifybtn">
+                <p class="classictech">Show Spotify Playlist</p>
+              </div>
+            </div>
+            <a href="https://facilethings.com/blog/en/science-behind-pomodoro-technique" targer="_blank"></a>
+            <div class="pomodoroexp">
+              <p class="classictech">Learn More about the Pomodoro Technique</p>
+              <img src="./rightarrow.png" class="rightarrow" alt="">
+            </div>
+          </a>
+          </div>
+          <div id="timertab" class="timertab tabdescription">
+            <div class="workinputcontainer">
+            <div class="workinputdiv inputdiv">
+              <p class="timerinputhead">Work Time</p>
+            <input class="timerinputs" id="worktime" type="number"/>
+            <p id="minutessubh">minutes</p>
+          </div>
+          <div class="breakinputdiv inputdiv">
+            <p class="timerinputhead">Break Time</p>
+            <input class="timerinputs"
+              id="breaktime"
+              type="number"
+            />
+            <p id="minutessubh">minutes</p>
+          </div>
+          <div class="longbreakinputdiv inputdiv">
+            <p class="timerinputhead">Long Break Time</p>
+            <input class="timerinputs"
+              id="breaktime"
+              type="number"
+            />
+            <p id="minutessubh">minutes</p>
+          </div>
+        </div>
+        <div class="classicpomodiv">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider">
+             <svg class="slider-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"><path fill="none" d="m4 16.5 8 8 16-16"></path></svg> 
+            </span>
+          </label>
+          <div class="classicpomodesc">
+            <p class="classictech">Use the classic Pomodoro technique: Work, Short Break -> 4x, then one long break</p>
+            <p class="denotepomo">Number of pomodoros is denoted ...</p>
+          </div>
+        </div>
+          </div>
+          <div id="notificationtab" class="notificationtab tabdescription">
+            <div class="selecttheme">
+              <h4>Select Notification Sound:</h4>
+              <select id="themeinput" name="theme" id="notificationsound">
+                <option value="bell">Bell</option>
+                <option value="chime">Chime</option>
+                <option value="birds">Birds</option>
+                <option value="lofi">Lofi</option>
+                <option value="siren">Siren</option>
+              </select>
+              <div class="classicpomodiv" id="notificationtoggle">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider">
+                   <svg class="slider-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"><path fill="none" d="m4 16.5 8 8 16-16"></path></svg> 
+                  </span>
+                </label>
+                <div class="classicpomodesc">
+                  <p class="classictech">Play Sound after Timer Finished</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <button id="save" class="save">Save changes</button>
         </div>
-        <img src="crosswhite.png" onclick="closesettings()" id="closesettings" alt="">
+        <img
+          src="crosswhite.png"
+          onclick="closesettings()"
+          id="closesettings"
+          alt=""
+        />
       </div>
     </section>
     <script src="./script.js"></script>
