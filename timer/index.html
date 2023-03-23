@@ -19,7 +19,7 @@
     <title>Timer</title>
   </head>
   <body>
-    <section>
+    <section id="section">
       <div class="container">
         <div class="secondarycontainer">
           <div class="painel">
@@ -76,7 +76,7 @@
           <div id="generaltab" class="generaltab tabdescription">
             <div class="selecttheme">
               <h4>Select Theme:</h4>
-              <select id="themeinput" name="theme" id="">
+              <select id="themeinput" name="theme">
                 <option value="classic">Classic</option>
                 <option value="rainyday">Rainy Day</option>
                 <option value="seoul">Seoul Sunrise</option>
@@ -142,9 +142,9 @@
           <div id="notificationtab" class="notificationtab tabdescription">
             <div class="selecttheme">
               <h4>Select Notification Sound:</h4>
-              <select id="themeinput" name="theme" id="notificationsound">
+              <select onclick="playaudio(this)" name="theme" id="notificationsound">
                 <option value="bell">Bell</option>
-                <option value="chime">Chime</option>
+                <option value="chimes">Chime</option>
                 <option value="birds">Birds</option>
                 <option value="lofi">Lofi</option>
                 <option value="siren">Siren</option>
@@ -171,8 +171,15 @@
           alt=""
         />
       </div>
+      <audio id="notificationsoundeffect">
+        <!-- <source src="./notifications/bell.wav" type="audio/mpeg">  -->
+      </audio>
+      <audio id="testaudio">
+        <!-- <source src="./notifications/bell.wav" type="audio/mpeg">  -->
+      </audio>
     </section>
     <script src="./script.js"></script>
+    <script src="onload.js"></script>
     <script src="customizetimer.js"></script>
   </body>
 </html>

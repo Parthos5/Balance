@@ -1,3 +1,9 @@
+let themeinput = document.getElementById("themeinput");
+let soundinput = document.getElementById("notificationsound");
+
+let notificationinput = document.getElementById("notificationsound")
+let notify = document.getElementById("notificationsoundeffect");
+
 function showtabinfo(e){
     let general = document.getElementById("generaltab");
     let timer = document.getElementById("timertab");
@@ -8,6 +14,9 @@ function showtabinfo(e){
     let notificationset = document.getElementById("notificationset"); //initialsing the buttons
 
     let current = e.id;
+    //initialsing the minutes and seconds
+    let worktime = document.getElementById("worktime");
+    let breaktime = document.getElementById("breaktime");
     if(current == "generalset")
     {
         //coloring btns white and transparent accordingly
@@ -22,9 +31,9 @@ function showtabinfo(e){
     }
     else if(current == "timerset")
     {
-        //initialsing the minutes and seconds
-        let worktime = document.getElementById("worktime");
-        let breaktime = document.getElementById("breaktime");
+        // //initialsing the minutes and seconds
+        // let worktime = document.getElementById("worktime");
+        // let breaktime = document.getElementById("breaktime");
 
         //coloring btns white and transparent accordingly
         timerset.setAttribute("style", `background-color:white;color: rgba(52,55,83,1);`);
@@ -39,14 +48,6 @@ function showtabinfo(e){
             timer.classList.add("fadedesc")
           }, 700);
 
-        //pushing the updated times into the localstorqage
-        document.getElementById("save").addEventListener("click",function(){
-            if(worktime.value != "" && breaktime.value != "") //condn incase no input is given to timer
-            {
-            let timerset = [worktime.value,breaktime.value];
-            localStorage.setItem("timer",JSON.stringify(timerset));
-            }
-        })
     }
     else
     {
@@ -60,4 +61,55 @@ function showtabinfo(e){
         general.style.display = "none";
         notification.style.display= "block";
     }
+
+    //pushing the updated settings into the localstorqage
+    document.getElementById("save").addEventListener("click",function(){
+        //timer settings geting pushed
+        if(worktime.value != "" && breaktime.value != "") //condn incase no input is given to timer
+        {
+        let timerset = [worktime.value,breaktime.value];
+        localStorage.setItem("timer",JSON.stringify(timerset));
+        }
+        console.log(themeinput.value);
+        //theme settings pushed
+        localStorage.setItem("theme",themeinput.value);
+    })
 }
+
+//pushing the updated settings into the localstorqage
+document.getElementById("save").addEventListener("click",function(){
+    //timer settings geting pushed
+    if(worktime.value != "" && breaktime.value != "") //condn incase no input is given to timer
+    {
+    let timerset = [worktime.value,breaktime.value];
+    localStorage.setItem("timer",JSON.stringify(timerset));
+    }
+
+    console.log(themeinput.value);
+    //theme settings pushed
+    localStorage.setItem("theme",themeinput.value);
+
+    //notification settings getting pushed
+    localStorage.setItem("notif",notificationinput.value);
+    notify.innerHTML = `<source src="./notifications/${notificationinput.value}.wav" type="audio/mpeg">`
+})
+
+
+// theme fetching and setting
+let body = document.getElementById("section");
+function updatemew() {
+    let theme = localStorage.getItem("theme");
+    body.setAttribute("style","background-image: url(./theme/"+ theme + ".jpg)")
+    notify.innerHTML = `<source src="./notifications/${notificationinput.value}.wav" type="audio/mpeg">`
+  }
+let updatetimered = setInterval(updatemew, 1000);
+
+// document.getElementById("nottii").play();
+
+//playing audio on selecting option
+// function playaudio(e){
+//     let testaudio = document.getElementById("testaudio");
+//     console.log(e.value);
+//     testaudio.innerHTML =`<source src="./notifications/${e.value}.wav" type="audio/mpeg">`
+//     testaudio.play();
+// }

@@ -4,8 +4,9 @@ let timersettings = JSON.parse(localStorage.getItem("timer"));
 console.log(timersettings[0]); //WORKTIME
 let workTime = timersettings[0];
 let breakTime = timersettings[1];
+let noti = document.getElementById("notificationsoundeffect")
 // let workTime = 1;
-// let breakTime = 2;
+// let breakTime = 1;
 
 let seconds = "00";
 
@@ -20,6 +21,8 @@ function update() {
   console.log(timersettings[0]); //WORKTIME
   workTime = timersettings[0];
   breakTime = timersettings[1];
+// let workTime = 1;
+// let breakTime = 1;
   document.getElementById("minutes").innerHTML = workTime;
   document.getElementById("seconds").innerHTML = seconds;
 }
@@ -49,11 +52,13 @@ function start() {
           breakCount++;
           workTittle.classList.remove("active");
           breakTittle.classList.add("active");
+          noti.play();
         } else {
           workMinutes = workTime;
           breakCount++;
           workTittle.classList.add("active");
           breakTittle.classList.remove("active");
+          noti.play();
         }
       }
       seconds = 59;
@@ -61,6 +66,8 @@ function start() {
   };
   setInterval(timerFunction, 1000);
 }
+
+
 
 // open settings popup
 let settingsbtn = document.getElementById("buttone5");
