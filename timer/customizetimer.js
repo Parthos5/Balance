@@ -104,12 +104,9 @@ function updatemew() {
   }
 let updatetimered = setInterval(updatemew, 1000);
 
-// document.getElementById("nottii").play();
-
-//playing audio on selecting option
-// function playaudio(e){
-//     let testaudio = document.getElementById("testaudio");
-//     console.log(e.value);
-//     testaudio.innerHTML =`<source src="./notifications/${e.value}.wav" type="audio/mpeg">`
-//     testaudio.play();
-// }
+function defaultset(){
+    localStorage.setItem("theme","classic");
+    localStorage.setItem("notif","bell");
+    localStorage.setItem("timer","[25,5]");
+    localStorage.setItem("notification","on");
+}

@@ -52,13 +52,15 @@ function start() {
           breakCount++;
           workTittle.classList.remove("active");
           breakTittle.classList.add("active");
-          noti.play();
+          // noti.play();
+          playnotification();
         } else {
           workMinutes = workTime;
           breakCount++;
           workTittle.classList.add("active");
           breakTittle.classList.remove("active");
-          noti.play();
+          // noti.play();
+          playnotification();
         }
       }
       seconds = 59;
@@ -67,7 +69,13 @@ function start() {
   setInterval(timerFunction, 1000);
 }
 
-
+function playnotification(){
+  let toggle = localStorage.getItem("notification");
+  if(toggle == "on")
+  {
+    noti.play();
+  }
+}
 
 // open settings popup
 let settingsbtn = document.getElementById("buttone5");
