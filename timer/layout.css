@@ -1,0 +1,45 @@
+section{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* background-image: url(./theme/seoul.jpg); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    justify-content: center;
+    column-gap: 4vw;
+}
+
+.mainleftcontainer{
+    display: flex;
+    column-gap: 4vw;
+    margin-left: 1vw;
+}
+
+.dataspotify{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.dataresult{
+    height: 30vh;
+    width: 30vw;
+    background: red;
+}
+
+.spotifyapi{
+    height: 48vh;
+    width: 30vw;
+    background: green;
+}
+
+.mainrightcontainer{
+    height: 80vh;
+    width: 33vw;
+    background-color: pink;
+    margin-top: 5vh;
+}
