@@ -14,8 +14,9 @@
       src="https://kit.fontawesome.com/a05e350007.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="./cssfiles/style.css" />
+    <link rel="stylesheet" href="./cssfiles/layout.css">
+    <link rel="stylesheet" href="./cssfiles/musicbox.css">
 
     <title>Timer</title>
   </head>
@@ -26,8 +27,64 @@
           <div class="dataresult">
 
           </div>
-          <div class="spotifyapi">
-            
+          <div class="musicbox">
+            <div class="searchmusicdiv">
+              <input type="text" id="search-input" placeholder="Search">
+              <div class="filterdiv">
+              <button id="search-button" class="searchtrack searchbtn" onclick = "searchtrack()">Song</button>
+              <button id="search-button" class="searchplaylist searchbtn" onclick = "search()">Playlist</button>
+            </div>
+          </div>
+          <div id="playlists">
+            <div class="playcard">
+              <img src="https://i.scdn.co/image/ab67706f00000003c771198277ecd33007dd2de4" id="playlistimg" alt="">
+              <div class="playlistdescdiv">
+              <p id="playlistname">Beast Mode</p>
+              <p id="playlistdesc">Get your beast mode on!</p>
+            </div>
+            </div>
+            <div class="playcard">
+              <img src="https://i.scdn.co/image/ab67706f00000003c771198277ecd33007dd2de4" id="playlistimg" alt="">
+              <div class="playlistdescdiv">
+              <p id="playlistname">Beast Mode</p>
+              <p id="playlistdesc">Get your beast mode on!</p>
+            </div>
+            </div>
+            <div class="playcard">
+              <img src="https://i.scdn.co/image/ab67706f00000003c771198277ecd33007dd2de4" id="playlistimg" alt="">
+              <div class="playlistdescdiv">
+              <p id="playlistname">Beast Mode</p>
+              <p id="playlistdesc">Get your beast mode on!</p>
+            </div>
+            </div>
+            <div class="playcard">
+              <img src="https://i.scdn.co/image/ab67706f00000003c771198277ecd33007dd2de4" id="playlistimg" alt="">
+              <div class="playlistdescdiv">
+              <p id="playlistname">Beast Mode</p>
+              <p id="playlistdesc">Get your beast mode on!</p>
+            </div>
+            </div>
+            <div class="playcard">
+              <img src="https://i.scdn.co/image/ab67706f00000003c771198277ecd33007dd2de4" id="playlistimg" alt="">
+              <div class="playlistdescdiv">
+              <p id="playlistname">Beast Mode</p>
+              <p id="playlistdesc">Get your beast mode on!</p>
+            </div>
+            </div>
+            <div class="playcard">
+              <img src="https://i.scdn.co/image/ab67706f00000003c771198277ecd33007dd2de4" id="playlistimg" alt="">
+              <div class="playlistdescdiv">
+              <p id="playlistname">Beast Mode</p>
+              <p id="playlistdesc">Get your beast mode on!</p>
+            </div>
+            </div>
+          </div>
+            <div class="musiccontrols">
+              <img src="./previous.png" class="controls" alt="">
+              <img id="play" src="./play.png" class="playpause" alt="">
+              <img id="pause" src="./pause.png" class="playpause" alt="">
+              <img src="./next.png" class="controls" alt="">
+            </div>
           </div>
         </div>
       <div class="container">
@@ -192,8 +249,8 @@
         <!-- <source src="./notifications/bell.wav" type="audio/mpeg">  -->
       </audio>
     </section>
-    <script src="./script.js"></script>
-    <script src="onload.js"></script>
-    <script src="customizetimer.js"></script>
+    <script src="./jsfiles/script.js"></script>
+    <script src="./jsfiles/onload.js"></script>
+    <script src="./jsfiles/customizetimer.js"></script>
   </body>
 </html>

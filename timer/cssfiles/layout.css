@@ -26,15 +26,14 @@ section{
 }
 
 .dataresult{
-    height: 30vh;
+    height: 24vh;
     width: 30vw;
     background: red;
 }
 
-.spotifyapi{
-    height: 48vh;
+.musicbox{
+    height: 54vh;
     width: 30vw;
-    background: green;
 }
 
 .mainrightcontainer{
