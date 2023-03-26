@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./cssfiles/style.css" />
     <link rel="stylesheet" href="./cssfiles/layout.css">
     <link rel="stylesheet" href="./cssfiles/musicbox.css">
-
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <title>Timer</title>
   </head>
   <body>
@@ -36,7 +36,7 @@
             </div>
           </div>
           <div id="playlists">
-            <div class="playcard">
+            <!-- <div class="playcard">
               <img src="https://i.scdn.co/image/ab67706f00000003c771198277ecd33007dd2de4" id="playlistimg" alt="">
               <div class="playlistdescdiv">
               <p id="playlistname">Beast Mode</p>
@@ -77,14 +77,24 @@
               <p id="playlistname">Beast Mode</p>
               <p id="playlistdesc">Get your beast mode on!</p>
             </div>
-            </div>
+            </div> -->
           </div>
             <div class="musiccontrols">
-              <img src="./previous.png" class="controls" alt="">
-              <img id="play" src="./play.png" class="playpause" alt="">
-              <img id="pause" src="./pause.png" class="playpause" alt="">
-              <img src="./next.png" class="controls" alt="">
+              <div class="songdetails">
+                <img src="" id="songpicture" class="songpicture" alt="img">
+                <div class="songdetailsdesc">
+                <p id="songname" class="songname"></p>
+                <p id="artistname" class="artistname"></p>
+              </div>
+              </div>
+              <div class="controlactions">
+              <img src="./previous.png" onclick="previous()" class="controlssong" alt="">
+              <img id="play" onclick="pause()" src="./play.png" class="playpause" alt="">
+              <img id="pause" onclick="pause()" src="./pause.png" class="playpause" alt="">
+              <img src="./next.png" onclick="next()" class="controlssong" alt="">
             </div>
+            </div>
+            <button style="position:absolute" id="authbtn" onclick="author()">Authorize</button>
           </div>
         </div>
       <div class="container">
@@ -252,5 +262,7 @@
     <script src="./jsfiles/script.js"></script>
     <script src="./jsfiles/onload.js"></script>
     <script src="./jsfiles/customizetimer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/spotify-web-api-js"></script>
+    <script src="./jsfiles/auth.js"></script>
   </body>
 </html>
