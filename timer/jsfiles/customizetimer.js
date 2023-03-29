@@ -71,6 +71,7 @@ function showtabinfo(e){
         localStorage.setItem("timer",JSON.stringify(timerset));
         }
         console.log(themeinput.value);
+
         //theme settings pushed
         localStorage.setItem("theme",themeinput.value);
     })
@@ -92,12 +93,31 @@ document.getElementById("save").addEventListener("click",function(){
     //notification settings getting pushed
     localStorage.setItem("notif",notificationinput.value);
     notify.innerHTML = `<source src="./notifications/${notificationinput.value}.wav" type="audio/mpeg">`
+
+    //musicbox settings fetching and rendering
+    let musicswitch = localStorage.getItem("musicbox");
+    if(musicswitch == "on")
+    {
+        musicbox.style.visibility = "visible";
+        musicbox.classList.toggle("show");
+        musicbox.classList.remove("hide");
+        // setTimeout(function() {
+        //     musicbox.style.visibility = "visible";
+        //   }, 500);
+    }
+    else{
+        musicbox.classList.remove("show");
+        musicbox.classList.toggle("hide");
+        setTimeout(function() {
+            musicbox.style.visibility = "hidden";
+          }, 500);
+    }
 })
 
 
 // theme fetching and setting
 let body = document.getElementById("section");
-function updatemew() {
+function updatemew(){
     let theme = localStorage.getItem("theme");
     body.setAttribute("style","background-image: url(./theme/"+ theme + ".jpg)")
     notify.innerHTML = `<source src="./notifications/${notificationinput.value}.wav" type="audio/mpeg">`
