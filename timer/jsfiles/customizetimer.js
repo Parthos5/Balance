@@ -130,3 +130,15 @@ function defaultset(){
     localStorage.setItem("timer","[25,5]");
     localStorage.setItem("notification","on");
 }
+
+//function for focus mode aka fullscreen
+function togglefullscreen(){
+  const elem = document.getElementById('section');
+  if (!document.fullscreenElement) {
+    elem.requestFullscreen().catch(err => {
+      alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}

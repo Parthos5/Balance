@@ -74,15 +74,15 @@
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     height: 35vh;
-    overflow:hidden;
+    overflow:auto;
     overflow-x: hidden;
     row-gap: 3vh;
     transition: overflow 1s;
 }
-
+/* 
 #playlists:hover{
     overflow-y: scroll;
-}
+} */
 
 #playlists::-webkit-scrollbar{
     width: 1px;
