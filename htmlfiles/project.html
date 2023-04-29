@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todolist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
     <link rel="stylesheet" href="../cssfiles/todo.css">
 </head>
-
 <body>
     <div class="container">
         <div id="sidebar" class="sidebar">
             <div class="profile">
-
+    
                 <div id="user" class="user">
                     <img src="../icons/user.png" alt="" class="picture">
                     <p class="name">Parth Puranik</p>
                     <img onclick="closesidebar()" src="../icons/back.png" id="sidebartoggle" alt="">
                 </div>
-
+    
                 <!-- <div class="search sidebarelement">
                     <img src="../icons/search.png" alt="" class="picture">
                     <input type="text">
                 </div> -->
-
+    
                 <div id="group" class="group">
                     <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
                         <g>
@@ -39,10 +33,10 @@
                     </svg>
                     <input placeholder="Search" type="search" class="input">
                 </div>
-
+    
             </div>
             <!-- <hr style="margin-top: 20px; height:0.5px;width:80%;margin: 0 auto;margin-left: 10px;"> -->
-
+    
             <div id="productivity" class="productivity">
                 <p class="heading taskhead text">Task List</p>
                 <div class="tasks">
@@ -53,7 +47,7 @@
                         </div>
                         <p class="text">1</p>
                     </div>
-
+    
                     <div class="procomponent">
                         <div class="topic">
                             <img src="../icons/calendar.png" alt="">
@@ -62,7 +56,7 @@
                         <p class="text">1</p>
                     </div>
                 </div>
-
+    
                 <p class="heading projecthead">Projects</p>
                 <div class="projects">
                     <div class="tasks">
@@ -76,7 +70,7 @@
                             <p class="text">1</p>
                         </div>
                         </a>
-
+    
                         <div class="procomponent">
                             <div class="topic">
                                 <img src="../icons/scheduled.png" alt="">
@@ -86,13 +80,13 @@
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="efficiency">
                     <p class="heading efficiencyhead text">Efficiency</p>
                 </div>
-
+    
             </div>
-
+    
             <!-- floating navbar -->
             <div id="floatingnavbar" class="productivity float floatingnavbar">
                 <div id="user" class="user floatuser">
@@ -100,7 +94,7 @@
                     <p class="name">Parth Puranik</p>
                     <!-- <img onclick="closesidebar()" src="../icons/back.png" id="sidebartoggle" alt=""> -->
                 </div>
-
+    
                 <p class="heading taskhead text">Task List</p>
                 <div class="tasks">
                     <div class="procomponent">
@@ -110,7 +104,7 @@
                         </div>
                         <p class="text">1</p>
                     </div>
-
+    
                     <div class="procomponent">
                         <div class="topic">
                             <img src="../icons/calendar.png" alt="">
@@ -119,7 +113,7 @@
                         <p class="text">1</p>
                     </div>
                 </div>
-
+    
                 <p class="heading projecthead">Projects</p>
                 <div class="projects">
                     <div class="tasks">
@@ -130,7 +124,7 @@
                             </div>
                             <p class="text">1</p>
                         </div>
-
+    
                         <div class="procomponent">
                             <div class="topic">
                                 <img src="../icons/scheduled.png" alt="">
@@ -140,25 +134,24 @@
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="efficiency">
                     <p class="heading efficiencyhead text">Efficiency</p>
                 </div>
                 <!-- <div id="emptynavbar"></div> -->
             </div>
             <!-- floating navbar ends -->
-
         </div>
 
-        <div id="main" class="main">
+        <div class="main">
             <div id="navbartask" class="navbartask">
                 <img src="../icons/hamburger.png" id="hamburger" alt="" class="hamburger">
                 <img src="../icons/right-arrow.png" onclick="opensidebar()" id="rightarrow" alt="">
                 <p>TaskList</p>
-
+    
                 <div class="sections">
                     <p class="tabs">Product</p>
-                    <a href="../timer/index.html" style="color: white; text-decoration:none">
+                    <a href="../timer/index.html">
                     <p class="tabs">Well-Being</p>
                     </a>
                     <p class="tabs">Focus</p>
@@ -171,8 +164,7 @@
                 <div class="tasktablewrapper">
                 <div class="tasktablehead">
                     <div class="date">
-                        <h1 id="day">Today</h1>
-                        <p id="todaydate">13th March</p>
+                        <h1 id="day">Project Name</h1>
                     </div>
 
                     <div class="actions">
@@ -196,7 +188,6 @@
                     <div class="tableheadings">
                         <p class="status">Status</p>
                         <p class="taskname">Name</p>
-                        <p class="priority">Priority</p>
                         <p class="duedate">Due Date</p>
                     </div>
                     <hr class="divide">
@@ -208,7 +199,6 @@
                                 <div class="checkmark"></div>
                             </label>
                             <p id="mytask">Making frontend of our website</p>
-                            <img src="../icons/red-flag.png" id="flag" alt="">
                             <p>14-03-2023</p>
                             <img src="../icons/more.png" id="more" class="more" alt="">
                         </div>
@@ -219,7 +209,6 @@
                                 <div class="checkmark"></div>
                             </label>
                             <p id="mytask">Eat lunch at 5 in the evening kask ainkncsc sofmwsidn </p>
-                            <img src="../icons/red-flag.png" id="flag" alt="">
                             <p>14-03-2023</p>
                             <img src="../icons/more.png" id="more" class="more" alt="">
                         </div>
@@ -230,7 +219,6 @@
                             </label>
                             <p id="mytask">Go to college and reach early before the lecturer does or else ill be
                                 expelled </p>
-                            <img src="../icons/red-flag.png" id="flag" alt="">
                             <p>14-03-2023</p>
                             <img src="../icons/more.png" id="more" class="more" alt="">
                         </div>
@@ -241,27 +229,13 @@
                             <!-- <img src="../icons/red-flag.png" id="flag" alt="">
                             <p>14-03-2023</p> -->
                         </div>
+                        <div class="users">
+                            <p>User 1</p>
+                            <p>User 2</p>
+                        </div>
                         <div class="addcontainer" id="addcontainer">
                             <input type="text" id="entertask" placeholder="Enter a Task">
                             <div class="pranddate">
-                                <div id="options" class="options">
-                                    <div onclick="priority(this)" id="p1" name="p1" value="1" class="opt redopt">
-                                        <img class="flagopt" src="../icons/red-flag.png" alt="">
-                                        <p>Priority 1</p>
-                                    </div>
-                                    <div onclick="priority(this)" id="p2" name="p2" value="2" class="opt orangeopt">
-                                        <img class="flagopt" src="../icons/yellow-flag.png" alt="">
-                                        <p>Priority 2</p>
-                                    </div>
-                                    <div onclick="priority(this)" id="p3" name="p3" value="3" class="opt greenopt">
-                                        <img class="flagopt" src="../icons/blue-flag.png" alt="">
-                                        <p>Priority 3</p>
-                                    </div>
-                                    <div onclick="priority(this)" id="p4" name="p4" value="4" class="opt blueopt">
-                                        <img class="flagopt" src="../icons/grey-flag.png" alt="">
-                                        <p>Priority 4</p>
-                                    </div>
-                                </div>
                                 <div class="dateandbtns">
                                     <input type="date" name="" id="dateaddtask">
                                     <div class="addbtns">
@@ -277,9 +251,8 @@
             </div>
         </div>
         </div>
-        </div>
-
-        <script src="../jsfiles/todo.js"></script>
+    </div>
+    
+    <script src="../jsfiles/todo.js"></script>
 </body>
-
 </html>
