@@ -21,6 +21,9 @@
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="stylesheet" href="cssfiles/taskbox.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <title>Timer</title>
   </head>
   <body>
@@ -98,26 +101,102 @@
               ><i class="fa-solid fa-arrow-rotate-left"></i
             ></a>
           </div>
-          <button class="focusbtn" id="focusbtn" onclick="togglefullscreen()">
-            Focus Mode
-        </button>
           <button id="bottone5" onclick="opensettings()" class="settingsbtn">
             Settings
           </button>
         </div>
       </div>  
     </div>
-    <div class="mainrightcontainer"><div id="tasks">
-      <div id="element" class="element" onmouseover="dots(this)" onmouseout="removedots(this)">
+    <div class="mainrightcontainer">
+      <div class="taskheading">
+        <div class="date">
+          <h1 id="day">Today</h1>
+          <p id="todaydate">13th March</p>
+      </div>
+        <h1 id="clock"></h1>
+      </div>
+      <button class="focusbtn" id="focusbtn" onclick="togglefullscreen()">
+        Focus Mode
+    </button>
+      <div id="tasks">
+      <div id="element" class="element">
         <label class="containercheck">
             <input type="checkbox">
             <div class="checkmark"></div>
         </label>
         <p id="mytask">Making frontend of our website</p>
         <img src="../icons/red-flag.png" id="flag" alt="">
-        <p>14-03-2023</p>
         <img src="../icons/more.png" id="more" class="more" alt="">
     </div>
+
+    <div id="element" class="element">
+      <label class="containercheck">
+          <input type="checkbox">
+          <div class="checkmark"></div>
+      </label>
+      <p id="mytask">Go cycling for 1 hour</p>
+      <img src="../icons/blue-flag.png" id="flag" alt="">
+      <img src="../icons/more.png" id="more" class="more" alt="">
+  </div>
+
+  <div id="element" class="element">
+    <label class="containercheck">
+        <input type="checkbox">
+        <div class="checkmark"></div>
+    </label>
+    <p id="mytask">Take a Shower</p>
+    <img src="../icons/yellow-flag.png" id="flag" alt="">
+    <img src="../icons/more.png" id="more" class="more" alt="">
+</div>
+
+<div id="element" class="element">
+  <label class="containercheck">
+      <input type="checkbox">
+      <div class="checkmark"></div>
+  </label>
+  <p id="mytask">Complete Module 4 of Operating Systems</p>
+  <img src="../icons/red-flag.png" id="flag" alt="">
+  <img src="../icons/more.png" id="more" class="more" alt="">
+</div>
+
+                        <div class="element" id="addtask">
+                            <img src="../icons/plus.png" alt="" id="addicon" class="addicon">
+                            <p id="mytask" class="addtasktext">Add a Task</p>
+                            <!-- <img src="../icons/red-flag.png" id="flag" alt="">
+                            <p>14-03-2023</p> -->
+                        </div>
+
+                        <div class="addcontainer" id="addcontainer">
+                          <input type="text" id="entertask" placeholder="Enter a Task">
+                          <div class="pranddate">
+                              <div id="options" class="options">
+                                  <div onclick="priority(this)" id="p1" name="p1" value="1" class="opt redopt">
+                                      <img class="flagopt" src="../icons/red-flag.png" alt="">
+                                      <p>Priority 1</p>
+                                  </div>
+                                  <div onclick="priority(this)" id="p2" name="p2" value="2" class="opt orangeopt">
+                                      <img class="flagopt" src="../icons/yellow-flag.png" alt="">
+                                      <p>Priority 2</p>
+                                  </div>
+                                  <div onclick="priority(this)" id="p3" name="p3" value="3" class="opt greenopt">
+                                      <img class="flagopt" src="../icons/blue-flag.png" alt="">
+                                      <p>Priority 3</p>
+                                  </div>
+                                  <div onclick="priority(this)" id="p4" name="p4" value="4" class="opt blueopt">
+                                      <img class="flagopt" src="../icons/grey-flag.png" alt="">
+                                      <p>Priority 4</p>
+                                  </div>
+                              </div>
+                              <div class="dateandbtns">
+                                  <input type="date" name="" id="dateaddtask">
+                                  <div class="addbtns">
+                                      <button id="cancel" class="sort">Cancel</button>
+                                      <button id="addthetask" class="btn"> Add
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
     </div></div>
       <div id="settings" class="settings">
         <div class="optiontabs">
@@ -257,6 +336,6 @@
     <script src="https://cdn.jsdelivr.net/npm/spotify-web-api-js"></script>
     <script src="./jsfiles/auth.js"></script>
     <script src="jsfiles/chart.js"></script>
-    <script src="jsfiles/calendar.js"></script>
+    <script src="jsfiles/taskbox.js"></script>
   </body>
 </html>
