@@ -4,7 +4,8 @@ let timersettings = JSON.parse(localStorage.getItem("timer"));
 console.log(timersettings[0]); //WORKTIME
 let workTime = timersettings[0];
 let breakTime = timersettings[1];
-let noti = document.getElementById("notificationsoundeffect")
+let noti = document.getElementById("notificationsoundeffect");
+let minctr = 25;
 // let workTime = 1;
 // let breakTime = 1;
 
@@ -66,6 +67,9 @@ function start() {
       seconds = 59;
     }
   };
+  if((workTime-workMinutes)%25 == 0){
+    updatestreaks();
+  }
   setInterval(timerFunction, 1000);
 }
 
@@ -114,4 +118,23 @@ function closesettings() {
   setTimeout(function () {
     settings.style.visibility = "hidden";
   }, 700);
+}
+
+//updating streaks code
+let numericday = new Date;
+let numericdate = numericday.getDay();
+console.log("date is "+numericdate);
+if(numericdate == 0)
+{
+  numericdate = 7;
+}
+
+const today = new Date().getDay();
+console.log("today is" + today);
+let streaks = [numericdate,0,0,0,0,0,0,0];
+
+//function for  sending streaks data
+function updatestreaks(){
+  streaks[today-1] += 1;
+  localStorage.setItem("streaks",JSON.stringify(streaks));
 }

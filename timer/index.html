@@ -17,15 +17,33 @@
     <link rel="stylesheet" href="./cssfiles/style.css" />
     <link rel="stylesheet" href="./cssfiles/layout.css">
     <link rel="stylesheet" href="./cssfiles/musicbox.css">
+    <link rel="stylesheet" href="../../Balance/cssfiles/navbar.css">
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="cssfiles/taskbox.css">
     <title>Timer</title>
   </head>
   <body>
+    <!-- <div id="navbartask" class="navbartask">
+      <img src="../icons/hamburger.png" id="hamburger" alt="" class="hamburger">
+      <img src="../icons/right-arrow.png" onclick="opensidebar()" id="rightarrow" alt="">
+      <p>TaskList</p>
+
+      <div class="sections">
+          <p class="tabs">Product</p>
+          <a href="../timer/index.html" style="color: white; text-decoration:none">
+          <p class="tabs">Well-Being</p>
+          </a>
+          <p class="tabs">Focus</p>
+          <p class="tabs">Community</p>
+          <img src="../icons/bell.png" id="bell" alt="">
+      </div>
+  </div> -->
     <section id="section">
       <div class="mainleftcontainer">
         <div class="dataspotify">
           <div class="dataresult">
-
+            <canvas id="myChart" width="420" height="160" ></canvas>
           </div>
           <div class="musicbox" id="musicbox">
             <div class="searchmusicdiv">
@@ -76,7 +94,7 @@
             <button id="start" onclick="start()">
               <i class="fa-solid fa-play"></i>
             </button>
-            <a id="reset" href="/"
+            <a id="reset" href="index.html"
               ><i class="fa-solid fa-arrow-rotate-left"></i
             ></a>
           </div>
@@ -87,9 +105,20 @@
             Settings
           </button>
         </div>
-      </div>
+      </div>  
     </div>
-    <div class="mainrightcontainer">hello</div>
+    <div class="mainrightcontainer"><div id="tasks">
+      <div id="element" class="element" onmouseover="dots(this)" onmouseout="removedots(this)">
+        <label class="containercheck">
+            <input type="checkbox">
+            <div class="checkmark"></div>
+        </label>
+        <p id="mytask">Making frontend of our website</p>
+        <img src="../icons/red-flag.png" id="flag" alt="">
+        <p>14-03-2023</p>
+        <img src="../icons/more.png" id="more" class="more" alt="">
+    </div>
+    </div></div>
       <div id="settings" class="settings">
         <div class="optiontabs">
           <div class="settingsoptiontabs">
@@ -123,6 +152,7 @@
                 <option value="seoul">Seoul Sunrise</option>
                 <option value="coffee">Coffee Shop</option>
                 <option value="dreamy">Dreamy Clouds</option>
+                <option value="cat">Cats</option>
               </select>
             </div>
             <div class="classicpomodiv spotifybtndiv">
@@ -226,5 +256,7 @@
     <script src="./jsfiles/customizetimer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/spotify-web-api-js"></script>
     <script src="./jsfiles/auth.js"></script>
+    <script src="jsfiles/chart.js"></script>
+    <script src="jsfiles/calendar.js"></script>
   </body>
 </html>
