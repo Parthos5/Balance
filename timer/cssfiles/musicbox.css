@@ -163,6 +163,9 @@
 #pause{
     display: none;
 }
+#play{
+    display: block;
+}
 
 .clicked{
     display: none;

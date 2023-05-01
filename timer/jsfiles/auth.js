@@ -146,6 +146,8 @@ function playtrack(track) {
   let turl = track.querySelector("#trackurl").innerHTML;
   console.log(turl);
   const token = accessToken;
+  let playstateimg = document.getElementById("play");
+  let pausestateimg = document.getElementById("pause");
   // let device_id = '0d1841b0976bae2a3a310dd74c0f3df354899bc8';
   let mydevice;
   console.log("before player conn");
@@ -182,11 +184,12 @@ function playtrack(track) {
         // Check if a new track is playing
         if (state.track_window.current_track) {
             let songdiv = document.getElementById("songdetails");
-        
             let songpic = document.getElementById("songpicture");
             let songname = document.getElementById("songname");
             let artistname = document.getElementById("artistname");
         
+            playstateimg.style.display = "none";
+            pausestateimg.style.display = "block";
             songname.innerHTML= `${state.track_window.current_track.name}`
             songpic.src=state.track_window.current_track.album.images[0].url;
             artistname.innerHTML = `${state.track_window.current_track.artists[0].name}`
@@ -204,6 +207,8 @@ function playplaylist(e) {
   let mydeviced;
   const token = accessToken;
   let playlisturl = e.querySelector("#playlisturl").innerHTML;
+  let playstateimg = document.getElementById("play");
+  let pausestateimg = document.getElementById("pause");
   player.connect().then((success) => {
     if (success) {
       player.addListener("ready", ({ device_id }) => {
@@ -240,7 +245,8 @@ function playplaylist(e) {
         // Check if a new track is playing
         if (state.track_window.current_track) {
             let songdiv = document.getElementById("songdetails");
-        
+            playstateimg.style.display = "none";
+            pausestateimg.style.display = "block";
             let songpic = document.getElementById("songpicture");
             let songname = document.getElementById("songname");
             let artistname = document.getElementById("artistname");
@@ -260,6 +266,7 @@ function playplaylist(e) {
 function pause() {
   console.log("in pause funcn");
   let pausebtn = document.getElementById("pause");
+  let playstateimg = document.getElementById("play");
   let mydeviceds;
   const tokens = accessToken;
   player.connect().then((success) => {
@@ -293,6 +300,10 @@ function pause() {
             }).then((response) => {
               if (!response.ok) {
                 throw new Error("Failed to pause playback");
+              }
+              else{
+                pausebtn.style.display = "none";
+                playstateimg.style.display = "block";
               }
             });
           }
