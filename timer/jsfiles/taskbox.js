@@ -71,52 +71,52 @@ addtaskbtn.addEventListener("click",function(){
 // let p3 = document.getElementById("p3");
 // let p4 = document.getElementById("p4");
 
-// function priority(e) {
-//   let selectedpr = e.querySelector("p").innerHTML;
-//   finalpriority = selectedpr; //priority is stored here for use in other functions
-//   // let p1 = document.getElementById("p1");
-//   // let p2 = document.getElementById("p2");
-//   // let p3 = document.getElementById("p3");
-//   // let p4 = document.getElementById("p4");
+function priority(e) {
+  let selectedpr = e.querySelector("p").innerHTML;
+  finalpriority = selectedpr; //priority is stored here for use in other functions
+  // let p1 = document.getElementById("p1");
+  // let p2 = document.getElementById("p2");
+  // let p3 = document.getElementById("p3");
+  // let p4 = document.getElementById("p4");
 
-//   console.log(selectedpr);
-//   let cid = e.id;
-//   let idcid = document.getElementById(cid);
-//   console.log(idcid);
+  console.log(selectedpr);
+  let cid = e.id;
+  let idcid = document.getElementById(cid);
+  console.log(idcid);
 
-//   if(cid == "p1")
-//   {
-//     p1.style.backgroundColor = "#47da99"
-//     p2.style.backgroundColor = "whitesmoke"
-//     p3.style.backgroundColor = "whitesmoke"
-//     p4.style.backgroundColor = "whitesmoke"
-//     priorityctr = 1;
-//   }
-//   else if(cid == "p2")
-//   {
-//     p1.style.backgroundColor = "whitesmoke"
-//     p2.style.backgroundColor = "#47da99"
-//     p3.style.backgroundColor = "whitesmoke"
-//     p4.style.backgroundColor = "whitesmoke"
-//     priorityctr = 1;
-//   }
-//   else if(cid == "p3")
-//   {
-//     p1.style.backgroundColor = "whitesmoke"
-//     p2.style.backgroundColor = "whitesmoke"
-//     p3.style.backgroundColor = "#47da99"
-//     p4.style.backgroundColor = "whitesmoke"
-//     priorityctr = 1;
-//   }
-//   else if(cid == "p4")
-//   {
-//     p1.style.backgroundColor = "whitesmoke"
-//     p2.style.backgroundColor = "whitesmoke"
-//     p3.style.backgroundColor = "whitesmoke"
-//     p4.style.backgroundColor = "#47da99"
-//     priorityctr = 1;
-//   }
-// }
+  if(cid == "p1")
+  {
+    p1.style.backgroundColor = "#47da99"
+    p2.style.backgroundColor = "whitesmoke"
+    p3.style.backgroundColor = "whitesmoke"
+    p4.style.backgroundColor = "whitesmoke"
+    priorityctr = 1;
+  }
+  else if(cid == "p2")
+  {
+    p1.style.backgroundColor = "whitesmoke"
+    p2.style.backgroundColor = "#47da99"
+    p3.style.backgroundColor = "whitesmoke"
+    p4.style.backgroundColor = "whitesmoke"
+    priorityctr = 1;
+  }
+  else if(cid == "p3")
+  {
+    p1.style.backgroundColor = "whitesmoke"
+    p2.style.backgroundColor = "whitesmoke"
+    p3.style.backgroundColor = "#47da99"
+    p4.style.backgroundColor = "whitesmoke"
+    priorityctr = 1;
+  }
+  else if(cid == "p4")
+  {
+    p1.style.backgroundColor = "whitesmoke"
+    p2.style.backgroundColor = "whitesmoke"
+    p3.style.backgroundColor = "whitesmoke"
+    p4.style.backgroundColor = "#47da99"
+    priorityctr = 1;
+  }
+}
 
 //cancel adding the task
 let cancel = document.getElementById("cancel");
